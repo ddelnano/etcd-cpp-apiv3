@@ -1,0 +1,109 @@
+proto_library(
+    name = "auth_proto",
+    srcs = ["auth.proto"],
+    deps = [
+        "@com_google_protobuf//:descriptor_proto",
+        "//proto/gogoproto:gogo_proto",
+    ],
+    strip_import_prefix = "/proto",
+    visibility = ["//visibility:public"],
+)
+
+proto_library(
+    name = "etcdserver_proto",
+    srcs = ["etcdserver.proto"],
+    deps = [
+        "@com_google_protobuf//:descriptor_proto",
+        "//proto/gogoproto:gogo_proto",
+    ],
+    strip_import_prefix = "/proto",
+    visibility = ["//visibility:public"],
+)
+
+proto_library(
+    name = "kv_proto",
+    srcs = ["kv.proto"],
+    deps = [
+        "@com_google_protobuf//:descriptor_proto",
+        "//proto/gogoproto:gogo_proto",
+    ],
+    strip_import_prefix = "/proto",
+    visibility = ["//visibility:public"],
+)
+
+proto_library(
+    name = "rpc_proto",
+    srcs = ["rpc.proto"],
+    deps = [
+        "@com_google_protobuf//:descriptor_proto",
+        "//proto/gogoproto:gogo_proto",
+        ":kv_proto",
+        ":auth_proto",
+        "//proto/google/api:annotations_proto",
+    ],
+    strip_import_prefix = "/proto",
+    visibility = ["//visibility:public"],
+)
+
+proto_library(
+    name = "v3election_proto",
+    srcs = ["v3election.proto"],
+    deps = [
+        "@com_google_protobuf//:descriptor_proto",
+        "//proto/gogoproto:gogo_proto",
+        ":rpc_proto",
+        ":kv_proto",
+        "//proto/google/api:annotations_proto",
+    ],
+    strip_import_prefix = "/proto",
+    visibility = ["//visibility:public"],
+)
+
+proto_library(
+    name = "v3lock_proto",
+    srcs = ["v3lock.proto"],
+    deps = [
+        "@com_google_protobuf//:descriptor_proto",
+        "//proto/gogoproto:gogo_proto",
+        ":rpc_proto",
+        "//proto/google/api:annotations_proto",
+    ],
+    strip_import_prefix = "/proto",
+    visibility = ["//visibility:public"],
+)
+
+cc_proto_library(
+    name = "auth_cc_proto",
+    deps = [":auth_proto"],
+    visibility = ["//visibility:public"],
+)
+
+cc_proto_library(
+    name = "etcdserver_cc_proto",
+    deps = [":etcdserver_proto"],
+    visibility = ["//visibility:public"],
+)
+
+cc_proto_library(
+    name = "kv_cc_proto",
+    deps = [":kv_proto"],
+    visibility = ["//visibility:public"],
+)
+
+cc_proto_library(
+    name = "rpc_cc_proto",
+    deps = [":rpc_proto"],
+    visibility = ["//visibility:public"],
+)
+
+cc_proto_library(
+    name = "v3election_cc_proto",
+    deps = [":v3election_proto"],
+    visibility = ["//visibility:public"],
+)
+
+cc_proto_library(
+    name = "v3lock_cc_proto",
+    deps = [":v3lock_proto"],
+    visibility = ["//visibility:public"],
+)

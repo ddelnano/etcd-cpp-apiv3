@@ -1,0 +1,20 @@
+proto_library(
+    name = "annotations_proto",
+    srcs = ["annotations.proto"],
+    deps = [
+        "@com_google_protobuf//:descriptor_proto",
+        ":http_proto",
+    ],
+    strip_import_prefix = "/proto",
+    visibility = ["//visibility:public"],
+)
+
+proto_library(
+    name = "http_proto",
+    srcs = ["http.proto"],
+    deps = [
+        "@com_google_protobuf//:descriptor_proto",
+    ],
+    strip_import_prefix = "/proto",
+    visibility = ["//visibility:public"],
+)

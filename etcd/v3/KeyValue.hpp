@@ -1,7 +1,7 @@
 #ifndef __V3_ETCDV3KEYVALUE_HPP__
 #define __V3_ETCDV3KEYVALUE_HPP__
 
-#include "proto/kv.pb.h"
+#include "kv.pb.h"
 
 namespace etcdv3 {
 class KeyValue {

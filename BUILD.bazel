@@ -1,10 +1,35 @@
 cc_library(
     name = "etcd_cpp_apiv3",
-    hdrs = glob(["etcd/**/*.hpp"]),
-    srcs = glob(["src/**/*.cpp"]),
+    hdrs = glob(
+        ["etcd/**/*.hpp"],
+        exclude = [
+            "etcd/Client.hpp",
+            "etcd/Watcher.hpp",
+            "etcd/WatcherImpl.hpp",
+            "etcd/AsyncClient.hpp",
+        ],
+    ),
+    # Remove src/Client.cpp, ssrc/Watcher.cpp, and src/WatcherImpl.cpp
+    srcs = glob([
+        "src/**/*.cpp"],
+        exclude = [
+            "src/Client.cpp",
+            "src/Watcher.cpp",
+            "src/WatcherImpl.cpp",
+        ],
+    ),
+    copts = ["-std=c++17"],
     deps = [
-        "@com_github_grpc_grpc//:grpc++",
-        "@com_google_protobuf//:protobuf",
+        "@grpc//:grpc++",
+        "@protobuf//:protobuf",
         "//proto:rpc_cc_proto",
+        "//proto:rpc_cc_grpc",
+        "//proto:kv_cc_proto",
+        "//proto:v3election_cc_proto",
+        "//proto:v3election_cc_grpc",
+        "//proto:v3lock_cc_proto",
+        "//proto:v3lock_cc_grpc",
+        "//proto:auth_cc_proto",
+        "//proto:auth_cc_grpc",
     ],
 )

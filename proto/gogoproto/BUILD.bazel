@@ -2,7 +2,7 @@ proto_library(
     name = "gogo_proto",
     srcs = ["gogo.proto"],
     deps = [
-        "@com_google_protobuf//:descriptor_proto",
+        "@protobuf//:descriptor_proto",
     ],
     strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],

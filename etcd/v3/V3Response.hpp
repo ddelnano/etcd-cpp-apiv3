@@ -2,8 +2,8 @@
 #define __V3_RESPONSE_HPP__
 
 #include <grpc++/grpc++.h>
-#include "proto/kv.pb.h"
-#include "proto/v3election.pb.h"
+#include "kv.pb.h"
+#include "v3election.pb.h"
 
 #include "etcd/v3/KeyValue.hpp"
 #include "etcd/v3/Member.hpp"

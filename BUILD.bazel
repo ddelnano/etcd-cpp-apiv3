@@ -19,6 +19,7 @@ cc_library(
         ],
     ),
     copts = ["-std=c++17"],
+    defines = ["WITH_GRPC_CHANNEL_CLASS"],
     deps = [
         "@grpc//:grpc++",
         "@protobuf//:protobuf",

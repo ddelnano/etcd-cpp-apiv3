@@ -40,9 +40,9 @@
 #include <grpc++/support/status_code_enum.h>
 #include <grpc/grpc.h>  // for grpc_lame_client_channel_create()
 
-#include "proto/rpc.grpc.pb.h"
-#include "proto/v3election.grpc.pb.h"
-#include "proto/v3lock.grpc.pb.h"
+#include "rpc.grpc.pb.h"
+#include "v3election.grpc.pb.h"
+#include "v3lock.grpc.pb.h"
 
 #include "etcd/KeepAlive.hpp"
 #include "etcd/SyncClient.hpp"

@@ -6,7 +6,7 @@
 #include "etcd/v3/AsyncGRPC.hpp"
 
 #include <grpc++/grpc++.h>
-#include "proto/rpc.grpc.pb.h"
+#include "rpc.grpc.pb.h"
 
 namespace etcdv3 {
 class AsyncLeaseKeepAliveAction;

@@ -5,9 +5,9 @@
 #include <ostream>
 
 #include <grpc++/grpc++.h>
-#include "proto/rpc.grpc.pb.h"
-#include "proto/v3election.grpc.pb.h"
-#include "proto/v3lock.grpc.pb.h"
+#include "rpc.grpc.pb.h"
+#include "v3election.grpc.pb.h"
+#include "v3lock.grpc.pb.h"
 
 #include "etcd/v3/action_constants.hpp"
 

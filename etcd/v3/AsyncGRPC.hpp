@@ -6,12 +6,12 @@
 
 #include <grpc++/grpc++.h>
 
-#include "proto/rpc.grpc.pb.h"
-#include "proto/rpc.pb.h"
-#include "proto/v3election.grpc.pb.h"
-#include "proto/v3election.pb.h"
-#include "proto/v3lock.grpc.pb.h"
-#include "proto/v3lock.pb.h"
+#include "rpc.grpc.pb.h"
+#include "rpc.pb.h"
+#include "v3election.grpc.pb.h"
+#include "v3election.pb.h"
+#include "v3lock.grpc.pb.h"
+#include "v3lock.pb.h"
 
 #include "etcd/Response.hpp"
 #include "etcd/v3/Action.hpp"

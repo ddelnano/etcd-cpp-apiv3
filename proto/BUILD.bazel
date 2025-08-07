@@ -41,8 +41,10 @@ proto_library(
         "//proto/gogoproto:gogo_proto",
         ":kv_proto",
         ":auth_proto",
-        "//proto/google/api:annotations_proto",
-    ],
+    ] + select({
+        "//:use_local_google_api": ["//proto/google/api:annotations_proto"],
+        "//conditions:default": ["@com_google_googleapis//google/api:annotations_proto"],
+    }),
     # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
@@ -55,8 +57,10 @@ proto_library(
         "//proto/gogoproto:gogo_proto",
         ":rpc_proto",
         ":kv_proto",
-        "//proto/google/api:annotations_proto",
-    ],
+    ] + select({
+        "//:use_local_google_api": ["//proto/google/api:annotations_proto"],
+        "//conditions:default": ["@com_google_googleapis//google/api:annotations_proto"],
+    }),
     # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
@@ -68,8 +72,10 @@ proto_library(
         "@protobuf//:descriptor_proto",
         "//proto/gogoproto:gogo_proto",
         ":rpc_proto",
-        "//proto/google/api:annotations_proto",
-    ],
+    ] + select({
+        "//:use_local_google_api": ["//proto/google/api:annotations_proto"],
+        "//conditions:default": ["@com_google_googleapis//google/api:annotations_proto"],
+    }),
     # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )

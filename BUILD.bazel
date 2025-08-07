@@ -1,3 +1,9 @@
+# Config setting to control whether to use local or external google.api
+config_setting(
+    name = "use_local_google_api",
+    define_values = {"use_local_google_api": "true"},
+)
+
 cc_library(
     name = "etcd_cpp_apiv3",
     hdrs = glob(

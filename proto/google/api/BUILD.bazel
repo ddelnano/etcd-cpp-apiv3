@@ -5,7 +5,7 @@ proto_library(
         "@protobuf//:descriptor_proto",
         ":http_proto",
     ],
-    strip_import_prefix = "/proto",
+    # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
 
@@ -15,6 +15,6 @@ proto_library(
     deps = [
         "@protobuf//:descriptor_proto",
     ],
-    strip_import_prefix = "/proto",
+    # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )

@@ -1,6 +1,6 @@
 #include "etcd/v3/Transaction.hpp"
 
-#include "rpc.grpc.pb.h"
+#include "proto/rpc.grpc.pb.h"
 
 #include "etcd/v3/Action.hpp"
 

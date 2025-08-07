@@ -7,7 +7,7 @@ proto_library(
         "@protobuf//:descriptor_proto",
         "//proto/gogoproto:gogo_proto",
     ],
-    strip_import_prefix = "/proto",
+    # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
 
@@ -18,7 +18,7 @@ proto_library(
         "@protobuf//:descriptor_proto",
         "//proto/gogoproto:gogo_proto",
     ],
-    strip_import_prefix = "/proto",
+    # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
 
@@ -29,7 +29,7 @@ proto_library(
         "@protobuf//:descriptor_proto",
         "//proto/gogoproto:gogo_proto",
     ],
-    strip_import_prefix = "/proto",
+    # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
 
@@ -43,7 +43,7 @@ proto_library(
         ":auth_proto",
         "//proto/google/api:annotations_proto",
     ],
-    strip_import_prefix = "/proto",
+    # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
 
@@ -57,7 +57,7 @@ proto_library(
         ":kv_proto",
         "//proto/google/api:annotations_proto",
     ],
-    strip_import_prefix = "/proto",
+    # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
 
@@ -70,7 +70,7 @@ proto_library(
         ":rpc_proto",
         "//proto/google/api:annotations_proto",
     ],
-    strip_import_prefix = "/proto",
+    # strip_import_prefix = "/proto",
     visibility = ["//visibility:public"],
 )
 

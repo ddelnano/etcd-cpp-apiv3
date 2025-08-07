@@ -6,7 +6,7 @@ import "proto/rpc.proto";
 import "proto/kv.proto";
 
 // for grpc-gateway
-import "proto/google/api/annotations.proto";
+import "google/api/annotations.proto";
 
 option (gogoproto.marshaler_all) = true;
 option (gogoproto.unmarshaler_all) = true;
